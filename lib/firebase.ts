@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, onSnapshot, query, where, doc, updateDoc } from "firebase/firestore";
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -9,10 +9,12 @@ const firebaseConfig = {
   storageBucket: "iftarsharebd.firebasestorage.app",
   messagingSenderId: "944804380628",
   appId: "1:944804380628:web:a9811b045975e39e28e041",
-  measurementId: "G-BSSYXZHDG2"
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
 export const db = getFirestore(app);
-export const auth = getAuth(app);
+
+// 🔥 Important: Only initialize auth in browser
+export const auth =
+  typeof window !== "undefined" ? getAuth(app) : null;
