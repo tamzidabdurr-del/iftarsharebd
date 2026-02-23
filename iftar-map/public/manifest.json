@@ -1,0 +1,38 @@
+{
+  "name": "ইফতার শেয়ার ম্যাপ ২০২৬",
+  "short_name": "ইফতার ম্যাপ",
+  "description": "রমজান ২০২৬ - বাংলাদেশ ইফতার শেয়ার ম্যাপ। ইফতার স্পট খুঁজুন, সেবক হোন, অসহায়দের সাহায্য করুন।",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "orientation": "portrait-primary",
+  "lang": "bn",
+  "categories": ["food", "social", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "ইফতার স্পট খুঁজুন",
+      "url": "/?tab=0",
+      "description": "আপনার কাছের ইফতার পয়েন্ট খুঁজুন"
+    },
+    {
+      "name": "সেবক হোন",
+      "url": "/?tab=2",
+      "description": "ইফতার সেবক হিসেবে নিবন্ধন করুন"
+    }
+  ]
+}
